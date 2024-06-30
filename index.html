@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Entry</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="">Index</a></h1>
+    </header>
+    <nav>
+        <h2>Nav left</h2>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+        <ul>
+            <li><a href="#" data-content="html/cl-3006-1.html">Flex grow: hover effect</a></li>
+            <li><a href="#" data-content="html/cl-3006-2.html">Clip Path Image</a></li>
+            <li><a href="#" data-content="html/cl-3006-3.html">Tab indicator animation</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Main Content</h2>
+        <p>This is the main content area.</p>
+    </main>
+    <nav>
+        <h2>Nav right</h2>
+        <form id="addLinkForm">
+            <label for="linkName">Link Name:</label>
+            <input type="text" id="linkName" required><br>
+            <label for="linkUrl">URL:</label>
+            <input type="text" id="linkUrl" required><br>
+            <label for="featured">Featured:</label>
+            <input type="checkbox" id="featured" value="true"><br>
+            <button type="submit">Add Link</button>
+        </form>
+    </nav>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

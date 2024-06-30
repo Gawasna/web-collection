@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Indicator Animation</title>
+    <style>
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            background-color: #f4f4f4;
+            width: 200px; /* Độ rộng của menu dọc */
+        }
+
+        .tab {
+            position: relative;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+            border-bottom: 1px solid #ddd; /* Đường viền giữa các tab */
+        }
+
+        .tab:last-child {
+            border-bottom: none; /* Loại bỏ đường viền dưới cùng */
+        }
+
+        .indicator {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: #007bff;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .tab:hover .indicator {
+            width: 100%;
+        }
+
+        .content {
+            padding: 20px;
+            margin-left: 220px; /* Khoảng cách từ nội dung đến menu */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tabs .tab').on('click', function() {
+                var contentUrl = $(this).find('a').attr('data-content');
+                $('#tab-content').load(contentUrl);
+                $('.tabs .tab').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="tabs">
+        <li class="tab"><a href="#" data-content="html/tab-content-1.html">Tab 1</a><div class="indicator"></div></li>
+        <li class="tab"><a href="#" data-content="html/tab-content-2.html">Tab 2</a><div class="indicator"></div></li>
+        <li class="tab"><a href="#" data-content="html/tab-content-3.html">Tab 3</a><div class="indicator"></div></li>
+    </ul>
+    <div class="content">
+        <h2>Main Content Area</h2>
+        <div id="tab-content"></div>
+    </div>
+</body>
+</html>
