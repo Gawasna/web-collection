@@ -1,0 +1,23 @@
+/* Container styles */
+.glow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fill-available;
+    background-color: #222222;
+}
+
+/* Image styles */
+.glow-image {
+    cursor: pointer;
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Glow effect on hover */
+.glow-image:hover {
+    box-shadow: 0 0 20px var(--glow-color);
+}

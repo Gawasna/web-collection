@@ -1,0 +1,40 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    background-color: #f4f4f4;
+    width: 200px; /* Độ rộng của menu dọc */
+}
+
+.tab {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+    border-bottom: 1px solid #ddd; /* Đường viền giữa các tab */
+}
+
+.tab:last-child {
+    border-bottom: none; /* Loại bỏ đường viền dưới cùng */
+}
+
+.indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+}
+
+.tab:hover .indicator {
+    width: 100%;
+}
+
+.content {
+    padding: 20px;
+    margin-left: 220px; /* Khoảng cách từ nội dung đến menu */
+}

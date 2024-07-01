@@ -1,0 +1,40 @@
+.custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.custom-image-container {
+    display: flex;
+    gap: 10px;
+}
+
+.custom-image-item {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.custom-image-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.custom-image-item:hover {
+    flex-grow: 2;
+    z-index: 1; 
+}
+
+.custom-image-item:hover img {
+    transform: scale(1.2);
+}
+
+.custom-image-item:not(:hover) img {
+    transform: scale(1);
+}

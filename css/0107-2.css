@@ -1,0 +1,76 @@
+/* Container styles */
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Toggle styles */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 25px;
+    background-color: #555;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Dark mode styles */
+.theme-toggle input:checked + .toggle-label {
+    background-color: #6b6b6b;
+}
+
+.theme-toggle input:checked + .toggle-label .toggle-background {
+    transform: translateX(25px);
+}
+
+.theme-toggle input:checked + .toggle-label .toggle-icon {
+    transform: translateX(25px);
+}
+
+.content.dark-mode {
+    --bg-color: #333;
+    --text-color: #fff;
+}

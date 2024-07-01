@@ -15,21 +15,32 @@
     <nav>
         <h2>Nav left</h2>
         <form id="search-form">
-            <input type="text" id="search-input" placeholder="Search...">
-            <button type="submit">Search</button>
+            <input type="text" id="search-input" placeholder="Enter at least 2 characters to search..." autocomplete="off">
         </form>
         <ul>
-            <li><a href="#" data-content="html/cl-3006-1.html">Flex grow: hover effect</a></li>
-            <li><a href="#" data-content="html/cl-3006-2.html">Clip Path Image</a></li>
-            <li><a href="#" data-content="html/cl-3006-3.html">Tab indicator animation</a></li>
+            <!-- Links will be dynamically added here -->
         </ul>
     </nav>
     <main>
         <h2>Main Content</h2>
-        <p>This is the main content area.</p>
+        <div id="content-display">
+            <p>This is the main content area.</p>
+        </div>
     </main>
     <nav>
         <h2>Nav right</h2>
+        <div class="html-ct-ctn">
+            <h3>HTML Content</h3>
+            <button id="toggle-html">Show HTML Content</button>
+            <pre id="html-content" style="display: none;"></pre>
+            <button id="copy-html">Copy HTML</button>
+        </div>
+        <div class="css-ct-ctn">
+            <h3>CSS Content</h3>
+            <button id="toggle-css">Show CSS Content</button>
+            <pre id="css-content" style="display: none;"></pre>
+            <button id="copy-css">Copy CSS</button>
+        </div>
         <form id="addLinkForm">
             <label for="linkName">Link Name:</label>
             <input type="text" id="linkName" required><br>
@@ -43,7 +54,7 @@
     <footer>
         <p>Footer</p>
     </footer>
-
     <script src="index.js"></script>
 </body>
+
 </html>
