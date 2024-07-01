@@ -11,6 +11,17 @@
 <body>
     <header>
         <h1><a href="">Index</a></h1>
+        <div class="search-container">
+            <form id="global-search-form">
+                <input type="text" id="global-search-input" placeholder="Search all files..." autocomplete="off">
+            </form>
+            <div id="search-results-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <ul id="search-results"></ul>
+                </div>
+            </div>
+        </div>
     </header>
     <nav>
         <h2>Nav left</h2>
@@ -55,6 +66,6 @@
         <p>Footer</p>
     </footer>
     <script src="index.js"></script>
+    <script src="filebtsearch.js"></script>
 </body>
-
 </html>
