@@ -1,0 +1,9 @@
+#theme-switcher:checked ~ header {
+    color: #fff;
+    background: #000;
+}
+  
+header {
+    color: #000;
+    background: #fff;
+}

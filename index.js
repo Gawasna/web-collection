@@ -27,7 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const featuredLinks = [
         {"name": "Flex grow: hover effect", "url": "html/cl-3006-1.html"},
         {"name": "Clip Path Image", "url": "html/cl-3006-2.html"},
-        {"name": "Tab indicator animation", "url": "html/cl-3006-3.html"}
+        {"name": "Tab indicator animation", "url": "html/cl-3006-3.html"},
+        {"name": "Responsive Grid Layout", "url": "html/cl-3006-4.html"},
+        {"name": "CSS Variables", "url": "html/cl-3006-5.html"},
+        {"name": "JavaScript Event Delegation", "url": "html/cl-3006-6.html"},
+        {"name": "Glow hover effect", "url": "html/cl-0107-1.html"},
+        {"name": "CSS Flexbox", "url": "html/cl-3006-8.html"},
+        {"name": "Dark theme switch", "url":"html/cl-0107-2.html"},
+        {"name": "Glow hover effect 2", "url":"html/cl-0107-4.html"}
     ];
 
     function displayLinks(links) {

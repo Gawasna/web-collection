@@ -54,6 +54,12 @@ header {
   background-color: #f4f4f4;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 nav:first-of-type {
   grid-area: nav-left;
   background-color: #eaeaea;
@@ -66,6 +72,20 @@ main {
 
 header , footer {
   border: 1px solid #000;
+}
+
+li::marker {
+  content: '◇ ';
+}
+
+#themesw:checked > header {
+  color: #fff;
+  background: #000;
+}
+
+#themesw > header{
+  color: #000;
+  background: #fff;
 }
 
 nav:last-of-type {
